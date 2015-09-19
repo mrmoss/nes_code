@@ -1,0 +1,38 @@
+NES
+	Presentation will cover pretty much graphics only, try for user input...time permitting...
+
+Outline:
+	Graphical Capabilities and Limitations  5 min
+		-Screen:
+			-256x240 resolution.
+			-Horizontal scanlines (240 of them).
+		-Sprites:
+			-8x8 sprites and 8x16 sprites.
+				-8x16 sprites are technically just two memory locations, must start on an even sprite index.
+					-This makes ALL sprites 8x16, so sprites that are 8x8 waste memory.
+			-64 sprites on the screen at one time (without flickering).
+			-8 sprites per scanline.
+			-4 colors per sprite (technically 3, other is usually transparent).
+				-Big deal over megaman having 5 colors.
+					-Not magic, just sprites being drawn on top of one another...
+		-Colors:
+			-Store up to 48-palettes.
+			-Max of 50 colors total.
+			-25 colors max per scanline.
+				-Note, each sprite can have up to 3 colors, 8*3=24, which is the max-1.
+			-Palette Generation
+
+	Tools									5 min
+		-Emulator
+			fceu
+		-Assembler
+			xa
+			tasm
+			nesasm
+		-Graphic Tools
+			Palette Generator
+			yy-chr
+
+	Structure of a Binary and Assembly		5 min
+		-Basic Program:
+		-Drawing Stuff

@@ -1,0 +1,43 @@
+Emulator:
+	sudo apt-get install fceu
+	;since this requres a disk image, you should stop...if you're ethical...
+	;you shouldn't be like these unethical bastards:
+	;	http://www.emuparadise.me/biosfiles/Nintendo_Disk_System_Boot_Sector.zip
+
+Assembler:
+	xa...nope...
+	tasm...nope...
+
+	Install:
+		wget http://www.nespowerpak.com/nesasm/NESASM3.zip
+		unzip NESASM3.zip
+		rm -r NESASM3.zip __MACOSX usage.txt
+
+	Run:
+		NESASM3.exe test.asm
+
+C Compiler:
+	Run the following (http://spiro.trikaliotis.net/debian):
+		echo "" | sudo tee --append /etc/apt/sources.list
+		echo "# CC65 Compiler" | sudo tee --append /etc/apt/sources.list
+		echo "deb     http://debian.trikaliotis.net/ stable contrib" | sudo tee --append /etc/apt/sources.list
+		echo "deb-src http://debian.trikaliotis.net/ stable contrib" | sudo tee --append /etc/apt/sources.list
+		wget http://spiro.trikaliotis.net/spiro.pgp
+		sudo apt-key add spiro.pgp
+		sudo apt-get update
+		sudo apt-get install cc65-nes
+	This...doesn't work...2.13.9 is broken...use 2.13.3:
+		wget ftp://ftp.musoftware.de/pub/uz/cc65/cc65-2.13.3-1.exe
+		wine cc65-2.13.3-1.exe
+
+Tile Editor:
+	Download from:  http://www.romhacking.net/utilities/108/
+
+Palette Generator (http://wayofthepixel.net/index.php?topic=10784.5):
+	http://bisqwit.iki.fi/utils/nespalette.php
+
+Compile C:
+	wine cl65 -t nes -o test.nes test.c
+
+Run C:
+	fceu test.nes

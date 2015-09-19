@@ -1,0 +1,16 @@
+; test1.asm
+player_x                         = $0303
+player_y                         = $0300
+backgrounds                      = $0000
+player_flags                     = $0302
+setup                            = $80C0
+player_index                     = $0301
+loop                             = $80E1
+sprites                          = $1000
+player_draw                      = $80E6
+v_sync                           = $80E1
+memory                           = $E000
+reset_palette                    = $80CA
+set_display                      = $80C0
+load_palette                     = $80D6
+palette_data                     = $8000

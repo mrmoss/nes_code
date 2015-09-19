@@ -1,0 +1,12 @@
+; newprog.asm
+backgrounds                      = $0000
+setup                            = $80C0
+loop                             = $80E1
+sprites                          = $1000
+player_draw                      = $80E6
+v_sync                           = $80E1
+memory                           = $E000
+reset_palette                    = $80CA
+set_display                      = $80C0
+load_palette                     = $80D6
+palette_data                     = $8000
